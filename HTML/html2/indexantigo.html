@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/global.css">
+    <link rel="shortcut icon" href="/HTML/assets/mapa_ms.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Conesul MS</title>
+    <script src="/JS/main.js" defer></script>
+</head>
+<body>
+    <main class="app">
+        <header class="app__header">
+            <h1 id="title">Conesul <img src="/HTML/assets/mapa_ms.png" alt="logo-mapa-ms"></h1>
+            <nav class="app__header-nav">
+                <ul class="app__header-nav-list">
+                    <li class="app__header-nav-list-item">
+                        <a href="#" id="link">Home</a>
+                    </li>
+                    <li class="app__header-nav-list-item">
+                        <a href="#" id="link">Etapas</a>
+                    </li>
+                    <li class="app__header-nav-list-item">
+                        <a href="#form" id="link">Minhas Inscricoes</a>
+                    </li>
+                    <li class="app__header-nav-list-item">
+                        <a href="cadastroUser.html" id="link">Login / Cadastro</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section id="app__section-home">
+            <div class="app__section-home-info">
+                <h2 class="app__section-home-info-title">Conesul de Ciclismo</h2>
+                <p class="paragrafo-section-home">Venha se aventurar nas etapas do conesul do MS</p>
+                <a href="#app__section-etapas" class="button">Ver Etapas</a>
+            </div>
+        </section>
+        <section id="app__section-etapas">
+            <p class="paragrafo-section-home">Proximas Etapas:</p>
+            <div class="app__section-home-info-etapas">
+                <div id="etapa-cidade">
+                    <h3 id="title-cidade">Sete Quedas</h3>
+                    <p>10/05/2024</p>
+                    <a id="detalhes" href="#">Ver detalhes</a>
+                </div>
+                <div id="etapa-cidade">
+                    <h3 id="title-cidade">Dourados</h3>
+                    <p>05/05/2024</p>
+                    <a id="detalhes" href="#">Ver detalhes</a>
+                </div>
+                <div id="etapa-cidade">
+                    <h3 id="title-cidade">Eldorado</h3>
+                    <p>22/04/2024</p>
+                    <a id="detalhes" href="">Ver detalhes</a>
+                </div>
+                <div id="etapa-cidade">
+                    <h3 id="title-cidade">Itapora</h3>
+                    <p>30/04/2024</p>
+                    <a id="detalhes" href="">Ver detalhes</a>
+                </div>
+                <div id="etapa-cidade">
+                    <h3 id="title-cidade">Amambai</h3>
+                    <p>31/04/2024</p>
+                    <a id="detalhes" href="">Ver detalhes</a>
+                </div>
+                <div id="etapa-cidade">
+                    <h3 id="title-cidade">Tacuru</h3>
+                    <p>15/06/2024</p>
+                    <a id="detalhes" href="">Ver detalhes</a>
+                </div>
+                <div id="etapa-cidade">
+                    <h3 id="title-cidade">Rio Brilhante</h3>
+                    <p>20/06/2024</p>
+                    <a id="detalhes" href="">Ver detalhes</a>
+                </div>
+                <div id="etapa-cidade">
+                    <h3 id="title-cidade">Navirai</h3>
+                    <p>25/06/2024</p>
+                    <a id="detalhes" href="">Ver detalhes</a>
+                </div>
+            </div>
+        </section>
+        <section id="inscricao">
+            <form id="form">
+                <div id="form-inscricao">
+                    <input id="input-nome" type="text" placeholder="Nome" class="input-form" required>
+                    <input id="input-email" type="text" placeholder="Email" class="input-form" required>
+                    <input id="input-cidade" type="text" placeholder="Cidade" class="input-form" required>
+                    <label for="etapas">Selecione a Etapa</label>
+                    <select name="etapas" required="required" id="etapas">
+                            <option value="1.1">Dourados - MS
+                            <option value="1.2">Amambai - MS
+                            <option value="1.3">Sete Quedas - MS
+                            <option value="1.4">Campo grande - MS
+                            <option value="1.4">Eldorado - MS
+                            <option value="1.4">Navirai - MS
+                            <option value="1.4">Rio Brilhante - MS
+
+                    </select>
+                    <label for="etapas">Selecione a Categoria</label>
+                    <select name="categorias" required="required" id="categorias">
+                        <optgroup label="1 Pro">
+                            <option value="1.1">Pro Masculino
+                            <option value="1.2">Pro Feminino
+                            <option value="1.3">Pro Livre
+                        <optgroup label="2 Master">
+                            <option value="2.1">Master A Masculino
+                            <option value="2.2">Master B Masculino
+                            <option value="2.3">Master A Feminino
+                            <option value="2.4">Master B Feminino
+                    </select>
+                    <button class="button-form">Inscrever-se</button>
+                </div>
+                
+            </form>
+            <div class="pagamento">
+                <p id="tempo"></p>
+            </div>
+        </section>
+        <footer class="app__footer">
+            <img src="/HTML/assets/mapa_ms.png" alt="icone mapa">
+            <nav class="app__header-nav-footer">
+                <ul class="app__header-nav-list-footer">
+                    <li class="app__header-nav-list-item-footer">
+                        <a href="#" id="link-footer">Contato</a>
+                    </li>
+                    <li class="app__header-nav-list-item-footer">
+                        <a href="#" id="link-footer">Suporte</a>
+                    </li>
+                    <li class="app__header-nav-list-item-footer">
+                        <a href="#" id="link-footer">Detalhes</a>
+                    </li>
+                </ul>
+                <ul class="app__header-nav-list-footer">
+                    <li class="app__header-nav-list-item-footer">
+                        <a href="#" id="link-footer">Ajuda</a>
+                    </li>
+                    <li class="app__header-nav-list-item-footer">
+                        <a href="#" id="link-footer">Opcoes</a>
+                    </li>
+                    <li class="app__header-nav-list-item-footer">
+                        <a href="#" id="link-footer">Colaboradores</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </main>
+</body>
+</html>
+
+// const buttonInscricao = document.querySelector('.button-form');
+// const divExibiQrCode = document.querySelector('.pagamento'); 
+// const form = document.getElementById('form');
+// const inputNome = document.getElementById('input-nome');
+// const inputEmail = document.getElementById('input-email');
+// const inputCidade = document.getElementById('input-cidade');
+// const selectCategoria = document.getElementById('categorias');
+// const selectEtapa = document.getElementById('etapas');
+// const tempo = document.getElementById('tempo');
+
+// let tempoDecorrido = 300;
+
+// let pessoasCadastradasEtapa = JSON.parse(localStorage.getItem('pessoasCadastradasEtapa')) || [];
+
+
+// form.addEventListener('submit', (event) => {
+//     event.preventDefault();
+// });
+
+// function criaQrCode() {
+//     const p = document.createElement('p');
+//     p.classList.add('paragrafo-section-home'); 
+//     p.textContent = 'Efetue o pagamento lendo o Qr code abaixo:';
+
+//     const imgQrCode = document.createElement('img');
+//     imgQrCode.setAttribute('src', '/HTML/assets/qrcode.png');
+//     imgQrCode.classList.add('imagem-qrcode'); 
+
+//     tempo.classList.add('paragrafo-section-home');
+
+//     divExibiQrCode.appendChild(p);
+//     divExibiQrCode.appendChild(imgQrCode);
+//     divExibiQrCode.appendChild(tempo);
+
+//     return divExibiQrCode;
+// }
+
+// const contagemRegressiva = () => {
+//     if(tempoDecorrido > 0){
+//         tempoDecorrido -= 1;
+//         setTimeout(contagemRegressiva, 1000);
+//         tempo.textContent = `${tempoDecorrido}`;
+//     }
+//     mostrarTempo();
+// }
+
+// function mostrarTempo(){
+//     const time = new Date(tempoDecorrido * 1000);
+//     const tempoFormatado = time.toLocaleTimeString('pt-br', {minute: '2-digit', second: '2-digit'});
+//     tempo.textContent = `${tempoFormatado}`;
+// }
+
+// buttonInscricao.addEventListener('click', () => {
+//     const selectIndexCategoria = selectCategoria.selectedIndex;
+//     const selectedTextCategoria = selectCategoria.options[selectIndexCategoria].text;
+
+//     const selectIndexEtapa = selectEtapa.selectedIndex;
+//     const selectedTextEtapa = selectEtapa.options[selectIndexEtapa].text;
+
+//     const candidato = {
+//         nome: inputNome.value,
+//         email: inputEmail.value,
+//         cidade: inputCidade.value,
+//         etapa: selectedTextEtapa,
+//         categoria: selectedTextCategoria
+//     }
+
+//     pessoasCadastradasEtapa.push(candidato);
+//     criaQrCode();
+//     contagemRegressiva();
+//     atualizaCadastros();
+
+//     pessoasCadastradasEtapa.forEach(Element => {
+//         console.log(Element);
+//     });
+// });
+
+
+
+// function atualizaCadastros(){
+//     localStorage.setItem("pessoasCadastradasEtapa", JSON.stringify(pessoasCadastradasEtapa));
+// }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/global.css">
+    <link rel="shortcut icon" href="/HTML/assets/mapa_ms.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Conesul MS</title>
+    <style>
+        #inscricao{
+            height: 30vh;
+            padding: 15%;
+        }
+    </style>
+</head>
+<body>
+    <main class="app">
+        <header class="app__header">
+            <h1 id="title">Conesul <img src="/HTML/assets/mapa_ms.png" alt="logo-mapa-ms"></h1>
+            <nav class="app__header-nav">
+                <ul class="app__header-nav-list">
+                    <li class="app__header-nav-list-item">
+                        <a href="index.html" id="link">Home</a>
+                    </li>
+                    <li class="app__header-nav-list-item">
+                        <a href="index.html" id="link">Etapas</a>
+                    </li>
+                    <li class="app__header-nav-list-item">
+                        <a href="#form" id="link">Minhas Inscricoes</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section id="inscricao">
+            <form id="form">
+                <div id="form-inscricao">
+                    <input id="input-email-login" type="text" placeholder="Email" class="input-form" required>
+                    <input id="input-senha-login" type="password" placeholder="Senha" class="input-form" required>
+                    <button class="button-form">Login</button>
+                    <a href="cadastroUser.html">Não possuo Cadastro?</a>
+                </div>     
+            </form>
+        </section>
+        <footer class="app__footer">
+            <img src="/HTML/assets/mapa_ms.png" alt="icone mapa">
+            <nav class="app__header-nav-footer">
+                <ul class="app__header-nav-list-footer">
+                    <li class="app__header-nav-list-item-footer">
+                        <a href="#" id="link-footer">Contato</a>
+                    </li>
+                    <li class="app__header-nav-list-item-footer">
+                        <a href="#" id="link-footer">Suporte</a>
+                    </li>
+                    <li class="app__header-nav-list-item-footer">
+                        <a href="#" id="link-footer">Detalhes</a>
+                    </li>
+                </ul>
+                <ul class="app__header-nav-list-footer">
+                    <li class="app__header-nav-list-item-footer">
+                        <a href="#" id="link-footer">Ajuda</a>
+                    </li>
+                    <li class="app__header-nav-list-item-footer">
+                        <a href="#" id="link-footer">Opcoes</a>
+                    </li>
+                    <li class="app__header-nav-list-item-footer">
+                        <a href="#" id="link-footer">Colaboradores</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </main>
+</body>
+</html>

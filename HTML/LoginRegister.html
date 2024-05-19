@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conesul MS</title>
+    <link rel="stylesheet" href="/CSS/stylesLogin.css">
+    <link rel="shortcut icon" href="/HTML/assets/mapa_ms.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/JS/loginRegister.js" defer></script>
+</head>
+<body>
+    <div class="container hidden" id="container">
+        <div class="form-container sign-up">
+            <form id="form-register">
+                <h1>Cria sua conta</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>ou use email e senha</span>
+                <input type="text" placeholder="Nome" id="input-nome-cadastro">
+                <input type="email" placeholder="Email" id="input-email-cadastro">
+                <input type="password" placeholder="Senha" id="input-senha-cadastro">
+                <button id="btn-Register">Cadastro</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form id="form-login">
+                <h1>Login</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>ou use email e senha</span>
+                <input type="email" placeholder="Email" id="input-email-login">
+                <input type="password" placeholder="Senha" id="input-senha-login">
+                <a href="#" id="forgot-password">Esqueci minha senha?</a>
+                <button id="btn-login">Login</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Bem-vindo novamente!</h1>
+                    <p>Entre com seus detalhes pessoais</p>
+                    <button id="login">Login</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Ola, Ciclista!</h1>
+                    <p>Registre com seus detalhes pessoais</p>
+                    <button id="register">Cadastro</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+</html>

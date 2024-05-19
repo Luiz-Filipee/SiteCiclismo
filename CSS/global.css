@@ -1,0 +1,307 @@
+:root {
+    --header-footer-color: #3A506B; 
+    --bg-button: #F4D35E; 
+    --color-letter: #333333; 
+    --color-letter-two: #f6f6f6; 
+    --color-three: #333333; 
+    --color-four: #007bff;
+    --font-primaria: 'Montserrat', sans-serif;
+    --font-secundaria: 'Segoe UI',Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    height: 100%;
+    font-family: var(--font-primaria);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-secundaria);
+    color: var(--color-three);
+}
+
+.app {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    height: 100vh;
+}
+
+
+.app__header{
+    background-color: var(--header-footer-color);
+    color: var(--color-letter-two);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title{
+    color: var(--color-letter-two);
+    font-weight: 500;
+    margin-left: 10px;
+    font-style: italic;
+    margin: 0;
+}
+
+img{
+    height: 25px;
+    width: 40px;
+}
+
+#icon-perfil{
+    cursor: pointer;
+    
+}
+
+.app__header-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__header-nav-list{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+#link{
+    text-decoration: none;
+    color: var(--color-letter-two);
+    font-style: italic;
+    font-size: 20px;
+    font-family: var(--font-primaria);
+    font-weight: 550;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#app__section-home{
+    background-image: url(/HTML/assets/Opening\ Soon.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 800px;
+}
+
+.app__section-home-info{
+    font-style: italic;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.app__section-home-info-title{
+    font-size: 90px;
+    color: var(--header-footer-color);
+    margin: 0;
+    text-shadow: -1px -1px 0 #fff,  
+                  1px -1px 0 #fff,
+                 -1px 1px 0 #fff,
+                  1px 1px 0 #fff;
+}
+
+.paragrafo-section-home{
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--header-footer-color);
+    text-shadow: -1px -1px 0 #fff,  
+                  1px -1px 0 #fff,
+                 -1px 1px 0 #fff,
+                  1px 1px 0 #fff;
+}
+
+.button{
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 10px 15px;
+    width: 200px;
+    color: var(--color-letter-two);
+    font-size: 20px;
+    background-color: var(--header-footer-color);
+    cursor: pointer;
+    font-style: italic;
+    font-weight: 550;
+    font-family: var(--font-primaria)
+}
+
+.button:hover{
+    background-color: #007bff;
+}
+
+
+#app__section-etapas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--header-footer-color);
+    height: 70%;
+}
+
+.app__section-home-info-etapas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+}
+
+
+#etapa-cidade {
+    background-color: #f4f4dd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#etapa-cidade:hover {
+    transform: translateY(-5px);
+}
+
+#etapa-cidade h3 {
+    margin-top: 0;
+    margin: 0;
+    font-size: 24px;
+    color: var(--color-three);
+}
+
+#etapa-cidade p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: var(--color-three);
+}
+
+#etapa-cidade img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#detalhes{
+    background-color: var(--header-footer-color);
+    color: var(--color-letter-two);
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px 10px;
+}
+
+#inscricao {
+    background-color: #f8f9fa; 
+    padding: 50px 0; 
+}
+
+#form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+#form-inscricao {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-form,
+select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-form:focus,
+select:focus {
+    outline: none; 
+    border-color: #007bff; 
+}
+
+.button-form {
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    width: 100%;
+    color: #ffffff;
+    font-weight: 550;
+    font-size: 16px;
+    background-color: #007bff; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-form:hover {
+    background-color: var(--header-footer-color); 
+}
+
+
+.app__footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--header-footer-color);
+    color: var(--color-letter-two);
+}
+
+
+.pagamento{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-qrcode{
+    height: 200px;
+    width: 200px;
+}
+
+.app__header-nav-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    text-align: center; 
+}
+
+.app__header-nav-list-footer{
+    list-style: none;
+}
+
+#link-footer{
+    text-decoration: none;
+    color: var(--color-letter-two);
+    gap: 100px;
+}
+
+
+#paragrafo-fotter{
+    font-size: 15px;
+    font-style: italic;
+    font-family: var(--font-primaria);
+}
+
+.app__card-timer {
+    color: var(--header-footer-color);
+    text-align: center;
+    font-family: Unbounded;
+    font-size: 12rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 3.2rem;
+    text-align: center;
+}

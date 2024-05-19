@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="shortcut icon" href="/HTML/assets/mapa_ms.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Conesul MS</title>
+    <script src="/JS/main.js" defer></script>
+</head>
+<body>
+    <main class="app">
+        <header class="app__header">
+            <img id="image-header" src="/HTML/assets/mapa_ms.png" alt="logo-mapa-ms">
+            <nav class="app__header-nav">
+                <ul class="app__header-nav-list">
+                    <li class="app__header-nav-list-item selecionado">
+                        <a href="index.html" id="link">Inicio</a>
+                    </li>
+                    <li class="app__header-nav-list-item">
+                        <a href="#app__section-etapas" id="link">Etapas</a>
+                    </li>
+                    
+                    <li class="app__header-nav-list-item">
+                        <a href="#app__section-patrocinadores" id="link">Patrocinadores</a>
+                    </li>
+                    <li class="app__header-nav-list-item">
+                        <a href="#fotter" id="link">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+            <span class="app__header-actions">
+                <a href="LoginRegister.html" id="button-login" class="button-login-registro">Login / Registro</a>
+                <a class="icone-user hidden" href="#" id="link icone-user"><img id="image-icon-user" src="/HTML/assets/icon-user.png" alt="icone usuario"></a>
+            </span>
+        </header>
+
+        <div id="menu-lateral" class="menu-lateral">
+            <a class="link-menu" href="#" id="minha-conta">Minha Conta</a>
+            <div class="divider"></div>
+            <a class="link-menu" href="#" id="sair">Sair</a>
+            <div class="divider"></div>
+        </div>
+
+        <section id="app__section-home">
+            <div class="home">
+                <h1>Conesul de Cicilsmo</h1>
+                <p>Venha fazer parte da maior competição regional do Ms</p>
+                <a href="#app__section-etapas" id="button-home-etapas" class="button-home-etapas">Ver Etapas</a>
+            </div>
+        </section>
+
+
+        <section id="app__section-etapas" >
+            <h2 class="paragrafo-section-home">Conferir Etapas</h2>
+            <div class="container">
+                <img id="seta-move" class="muda-etapa" src="/HTML/assets/seta-esquerda.png" alt="seta-esquerda">
+                <div class="app__section-home-info-etapas">
+                    <div class="info">
+                        <h3 class="title-cidade">Dourados</h3>
+                        <p class="" id="data-etapa">10/05/2024</p>
+                    </div>
+                    <div class="categorias">
+                        <h4 class="info-categorias">Categorias</h4>
+                        <ul class="app__header-nav-list">
+                            <li id="link-categorias" class="">Masculino</li>
+                            <li id="link-categorias" class="">Feminino</li>
+                        </ul>
+                    </div>
+                    <img id="imagem-etapa" class="" src="/HTML/assets/imagem-dourados.jpeg" alt="cidade etapa">
+                    <div class="button">
+                        <button id="saiba-mais" class="button-login-registro">Inscrever-se</button>
+                    </div>
+                </div>
+                <img id="seta-move" class="muda-etapa" src="/HTML/assets/seta-direita.png" alt="seta-esquerda">
+            </div>
+        </section>
+
+
+        <section id="app__section-patrocinadores">
+            <h2 class="paragrafo-section-home">Patrocinadores</h2>
+            <div class="info-patrocinadores">
+                <div class="info-empresa">
+                    <img id="patrocinador-image" src="/HTML/assets/ambev.jpg" alt="imagem-patrocinadord">
+                </div>
+                <div class="info-empresa">
+                    <img id="patrocinador-image" src="/HTML/assets/logo-sicredi-256.png" alt="imagem-patrocinadord">
+                </div>
+                <div class="info-empresa">
+                    <img id="patrocinador-image" src="/HTML/assets/imagemcoca.png" alt="imagem-patrocinadord">
+                </div>
+                <div class="info-empresa">
+                    <img id="patrocinador-image" src="/HTML/assets/correios-logo.png" alt="imagem-patrocinadord">
+                </div>
+                <div class="info-empresa">
+                    <img id="patrocinador-image" src="/HTML/assets/mercado-livre-logo.png" alt="imagem-patrocinadord">
+                </div>
+            </div>
+            <div class="patrocinio">
+                <p class="patrocinio-paragrafo">Venha também fazer parte deste time!</p>
+                <button id="button-patrocinio" class="button-login-registro">Saiba Mais</button>
+            </div>
+        </section>
+        <footer id="fotter" class="app__footer">
+            <img id="icon__ms_footer" src="/HTML/assets/mapa_ms.png" alt="logo-ms">
+            <nav class="app__header-nav-footer">
+                <ul class="app__header-nav-list-footer">
+                    <label class="label-info">Ajuda</label>
+                    <li class="li-fotter">
+                        <a class="link-footer" href="">Suporte</a>
+                    </li>
+                </ul>
+                <ul class="app__header-nav-list-footer">
+                    <label class="label-info">Termos de Uso</label>
+                    <li class="li-fotter">
+                        <a class="link-footer" href="">Política de Cookies</a>
+                    </li>
+                    <li class="li-fotter">
+                        <a class="link-footer" href="">Política de Privacidade</a>
+                    </li>
+                </ul>
+                <ul class="app__header-nav-list-footer">
+                    <label class="label-info">Envia sua mensagem</label>
+                    <li class="li-fotter">
+                        <a class="link-footer" href="#"><img id="icon-redes-sociais" src="/HTML/assets/email-icon.png" alt="icon-email"> consesulMs@gmail.com</a>
+                    </li>
+                    <li class="li-fotter">
+                        <a class="link-footer" href="#"><img id="icon-redes-sociais" src="/HTML/assets/icon-insta.png" alt="icon-insta"> @ConesulMs</a>
+                    </li>
+                </ul>
+            </nav>            
+        </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+</html>

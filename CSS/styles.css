@@ -1,0 +1,465 @@
+:root{
+    --bg-body: #FFFFFF;
+    --bg-header: #396DD5;
+    --bg-header-50: rgba(57, 109, 213, 0.75);
+    --bg-categorias: #8455FF;
+    --bg-etapas: #F3F4F9;
+    --color-primaria: #34ACEF;
+    --color-secundaria: #1F6F11;
+    --color-selecionado: #296CD0;
+    --color-letras: #296CD0;
+    --color-letras-secundaria: #00388B;
+
+    --font-padrao: 'Montserrat', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-padrao);
+}
+
+.main{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.app__header {
+    height: 70px;
+    background-color: var(--bg-header-50);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-weight: 550;
+    font-style: inherit;
+    top: 0;
+    width: 100%;
+    left: 0;
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+.scrolled {
+    top: -70px;
+}
+
+#image-header{
+    width: 62px;
+    height: 61px;
+    margin: 0;
+    padding: 0;
+    margin-left: 56px;
+    margin-top: 11px;
+    margin-bottom: 10px;
+}
+
+.app__header-nav{
+    margin-left: 250px;
+    gap: 100px;
+}
+
+.app__header-nav-list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 60px;
+}
+
+#link{
+    text-decoration: none;
+    color: rgb(255, 255, 255, 0.75);
+    font-size: 14px;
+    cursor: pointer;
+    gap: 100px;
+}
+
+#link:hover{
+    color: white;
+    transform: translateY(-5px);
+}
+
+.selecionado{
+    color: white;
+    border-bottom: 3px solid var(--color-selecionado);
+}
+
+#button-login{
+    text-decoration: none;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+}
+
+.button-login-registro{
+    border: none;
+    border-radius: 8px;
+    background-image: linear-gradient(to left, var(--color-secundaria), var(--color-primaria));
+    color: white;
+    width: 210px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: 550;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.button-login-registro:hover {
+    transform: translateY(-5px);
+}
+
+.app__header-actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 46px;
+    padding: 0;
+    color: rgb(255, 255, 255, 0.75);
+}
+
+#image-icon-user{
+    height: 30px;
+}
+
+.menu-lateral {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    top: 75px;
+    right: -250px; 
+    width: 250px;
+    height: 100px;
+    background-color: var(--bg-header-50);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out; 
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+.menu-lateral.active {
+    right: 0; 
+}
+
+.divider{
+    border: 1px solid #ccc;
+    width: 200px;
+    margin-top: 5px;
+}
+
+.link-menu{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+#app__section-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 845px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 2s;
+    position: relative;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#app__section-home h1{
+    position: absolute;
+    font-size: 60px;
+    color: var(--color-letras-secundaria);
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    text-shadow:
+                -1px -1px 0 #fff,
+                1px -1px 0 #fff,
+                -1px 1px 0 #fff,
+                1px 1px 0 #fff;
+    animation: escreve 10s steps(30, end) infinite, blink 0.75s step-end infinite;
+}
+
+@keyframes escreve {
+    0% {
+        width: 0;
+    }
+    50%{
+        width: 50%;
+    }
+    100%{
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50%{
+        border-color: var(--color-letras-secundaria);
+    }
+    
+}
+
+#app__section-home p{
+    margin-top: 150px;
+    position: absolute;
+    font-size: 30px;
+    color: var(--color-letras-secundaria);
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-shadow:
+                -1px -1px 0 #fff,
+                1px -1px 0 #fff,
+                -1px 1px 0 #fff,
+                1px 1px 0 #fff;
+}
+
+.button-home-etapas{
+    text-align: center;
+    border: 3px solid var(--bg-header);
+    border-radius: 8px;
+    color: white;
+    width: 250px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 550;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 250px;
+}
+
+.button-home-etapas:hover {
+    transform: translateY(-5px);
+}
+
+#app__section-etapas{
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.paragrafo-section-home{
+    background-image: linear-gradient(to left, var(--color-secundaria), var(--color-primaria)); 
+    -webkit-background-clip: text; 
+    color: transparent; 
+    font-size: 40px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+
+#seta-move{
+    width: 40px;
+    height: 110px;
+    cursor: pointer;
+}
+
+#seta-move:hover{
+    transform: translateY(-5px);
+}
+
+
+.app__section-home-info-etapas{
+    background-color: var(--bg-etapas);
+    padding: 50px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.info{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    color: var(--color-letras);
+    font-size: 100px;
+    gap: 251px;
+}
+
+.title-cidade, #data-etapa{
+    color: var(--color-letras);
+    font-size: 40px;
+    font-weight: 550;
+}
+
+.info-categorias{
+    color: var(--color-letras-secundaria);
+    font-size: 30px;
+    height: 10px;
+}
+
+.app__header-nav-list{
+    display: flex;
+    justify-content: start;
+    margin: 0;
+    padding: 0;
+    gap: 14px;
+}
+
+#link-categorias{
+    padding: 7px 7px;
+    color: white;
+    background-color: var(--bg-categorias);
+}
+
+#imagem-etapa{
+    margin-top: 16px;
+    height: 332px;
+    width: 676px;
+    border-radius: 20px;
+}
+
+#data-etapa,
+#link-categorias,
+#imagem-etapa,.info-categorias,
+.app__header-nav-list{
+    transition: opacity 0.5s ease;
+}
+
+#data-etapa,
+#imagem-etapa,
+#link-categorias,
+.info-categorias,
+.app__header-nav-list,
+.title-cidade {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.button{
+    margin-top: 29px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#app__section-patrocinadores{
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-patrocinadores{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 30px;
+}
+
+.info-empresa{
+    border: none;
+    border-radius: 10px;
+    background-color: var(--bg-etapas);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.info-empresa:hover{
+    transform: translateY(-5px);
+    cursor: default;
+}
+
+.patrocinio{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.patrocinio-paragrafo{
+    font-size: 20px;
+    color: var(--color-letras);
+}
+
+#patrocinador-image{
+    max-width: 100%;
+    max-height: 100%;
+    width: 150px;
+}
+
+.app__footer{
+    margin-top: 76px;
+    height: 214px;
+    background-color: var(--bg-header-50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#icon__ms_footer{
+    width: 137px;
+    height: 148px;
+}
+
+.app__header-nav-footer{
+    display: flex;
+    justify-content: center;
+    gap: 113px;
+}
+
+.app__header-nav-list-footer{
+    list-style: none;
+}
+
+.li-fotter{
+    margin-top: 16px;
+    align-items: center;
+}
+
+.link-footer{
+    text-decoration: none;
+    color: rgb(255, 255, 255, 0.5);
+    font-size: 15px;
+}
+
+#icon-redes-sociais{
+    width: 30px;
+    height: 18px;
+}
+
+.label-info{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+
