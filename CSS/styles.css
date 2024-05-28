@@ -423,8 +423,15 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transform: translate(-10%);
+    transition: opacity 2s ease-out, transform 2s ease-out;
 }
 
+#app__section-etapas.visible{
+    opacity: 1;
+    transform: translate(0);
+}
 
 .paragrafo-section-home{
     background-image: linear-gradient(to left, var(--color-secundaria), var(--color-primaria)); 
@@ -457,6 +464,7 @@ body{
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
+
 
 .hidden{
     visibility: hidden;
@@ -538,6 +546,15 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transform: translate(-10%);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+
+#app__section-fotos.visible {
+    opacity: 1;
+    transform: translate(0);
 }
 
 .info-fotos{
@@ -570,6 +587,14 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transform: translate(-10%);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+#app__section-patrocinadores.visible {
+    opacity: 1;
+    transform: translate(0);
 }
 
 .info-patrocinadores{

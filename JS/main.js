@@ -23,6 +23,22 @@ const fotosEtapas = document.querySelectorAll('.foto-etapa');
 
 const buttonVoltaHome = document.getElementById('voltarAoTopo');
 
+document.addEventListener('DOMContentLoaded', () => {
+    const sectionEtapas = document.querySelectorAll('section');
+    const observador = new IntersectionObserver((entrada) => {
+        entrada.forEach((entrou) => {
+            if(entrou.isIntersecting){
+                entrou.target.classList.add('visible');
+            }
+        });
+    },{
+        threshold: 0.1
+    });
+
+    sectionEtapas.forEach((item) =>{
+        observador.observe(item);
+    });
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('nav ul li a');
