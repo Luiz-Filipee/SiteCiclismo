@@ -16,6 +16,7 @@ const perfilUser = document.querySelector('.perfil');
 const inputEmailInfo = document.getElementById('input-nome-info');
 const inputNomeInfor = document.getElementById('input-email-info');
 const inputNumeroInfo = document.getElementById('input-numero-info');
+const iconFotoPerfilUser = document.getElementById('icon__perfil');
 
 const suporte = document.getElementById('suporte');
 
@@ -278,10 +279,27 @@ document.getElementById('item-sair').addEventListener('click', ()=>{
     resetaCamposPerfil();
 });
 
+document.getElementById('item-perfil').addEventListener('click', ()=>{
+    const imagemPerfilUser = document.getElementById('icon__perfil');
+    imagemPerfilUser.style.transform = 'translateY(-5px)';
+    setTimeout(() => {
+        imagemPerfilUser.style.transform = 'translateY(0)';
+    }, 500);
+});
+
+document.getElementById('item-informacoes').addEventListener('click', ()=>{
+    const formUserPerfil = document.getElementById('form-info-user');
+    formUserPerfil.style.transform = 'translateY(-5px)';
+    setTimeout(() => {
+        formUserPerfil.style.transform = 'translateY(0)';
+    }, 500);
+});
+
 function resetaCamposPerfil(){
     inputEmailInfo.value = '';
     inputNomeInfor.value = '';
     inputNumeroInfo.value = '';
+    iconFotoPerfilUser.setAttribute('src', '/HTML/assets/imagem_padrao_foto_perfil.jpg');
 }
 
 document.querySelector('.btn-perfil').addEventListener('click', ()=>{
@@ -297,6 +315,7 @@ document.getElementById('minha-conta').addEventListener('click', ()=>{
         const usuarioLogado = JSON.parse(usuarioLogaooJSON);
         inputEmailInfo.value = usuarioLogado.nome;
         inputNomeInfor.value = usuarioLogado.email;
+        iconFotoPerfilUser.setAttribute('src','/HTML/assets/icon-pessoa.jpg');
         inputNumeroInfo.value = '67998375906';
     }else{
         console.log('Nenhum usuário encontrado');
