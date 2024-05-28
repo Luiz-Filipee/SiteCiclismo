@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const sectionAlvo = document.querySelector(alvoId);
             const distanciaDoAlvo = sectionAlvo.getBoundingClientRect().top;
             const InicioY = window.pageYOffset;
-            const duracao = 1500; 
+            const duracao = 1000; 
             let tempoInicio = null;
 
             function animacaoScroll(tempoAtual) {
