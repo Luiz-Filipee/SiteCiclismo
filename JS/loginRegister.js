@@ -23,26 +23,50 @@ function atualizaListaPessoasCadastradas(){
     localStorage.setItem("pessoasCadastradas", JSON.stringify(pessoasCadastradas));
 }
 
+function validaCampos(){
+    if(nomeCadastro.value && emailCadastro.value && senhaCadastro.value){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+function resetaCampos(){
+    nomeCadastro.value = '';
+    emailCadastro.value = '';
+    senhaCadastro.value = '';
+}
 
 formRegister.addEventListener('submit', (event)=>{
     event.preventDefault();
 
     if(event.submitter == btnRegister){
-        const pessoa = {
-            nome: nomeCadastro.value,
-            email: emailCadastro.value,
-            senha: senhaCadastro.value,
-            logado: false
-        };
-        cadastrar(pessoa);
-        atualizaListaPessoasCadastradas();
-        Swal.fire({
-            position: "center",
-            icon: "success",
-            title: "Usuario cadastrado com sucesso",
-            showConfirmButton: false,
-            timer: 2000
-          });
+        if(validaCampos()){
+            const pessoa = {
+                nome: nomeCadastro.value,
+                email: emailCadastro.value,
+                senha: senhaCadastro.value,
+                logado: false
+            };
+            cadastrar(pessoa);
+            atualizaListaPessoasCadastradas();
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Usuario cadastrado com sucesso",
+                showConfirmButton: false,
+                timer: 2000
+            });
+            resetaCampos();
+        }else{
+            Swal.fire({
+                position: "center",
+                icon: "error",
+                title: "Preencha todos os campos. Tente novamente",
+                showConfirmButton: false,
+                timer: 2000
+            });
+        }
     }
 });
 
@@ -54,6 +78,7 @@ formLogin.addEventListener('submit', (event)=>{
             if(pessoaCadastrada.email == emailLogin.value && pessoaCadastrada.senha == senhaLogin.value){
                 pessoaCadastrada.logado = true;
                 logar(pessoaCadastrada);
+                return;
             }else{
                 Swal.fire({
                     position: "center",
@@ -61,7 +86,7 @@ formLogin.addEventListener('submit', (event)=>{
                     title: "email ou senha incorretas. Tente novamente",
                     showConfirmButton: false,
                     timer: 2000
-                  });
+                });
             }
         });
     }

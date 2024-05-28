@@ -12,6 +12,16 @@ const ulNavHeader = document.querySelectorAll('.app__header-nav-list-item');
 
 const iconeUser = document.querySelector('.icone-user');
 const menuUser = document.getElementById('menu-lateral');
+const perfilUser = document.querySelector('.perfil');
+const inputEmailInfo = document.getElementById('input-nome-info');
+const inputNomeInfor = document.getElementById('input-email-info');
+const inputNumeroInfo = document.getElementById('input-numero-info');
+
+const suporte = document.getElementById('suporte');
+
+const fotosEtapas = document.querySelectorAll('.foto-etapa');
+
+const buttonVoltaHome = document.getElementById('voltarAoTopo');
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -19,27 +29,47 @@ document.addEventListener('DOMContentLoaded', function() {
     links.forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            const distanceToTarget = targetSection.getBoundingClientRect().top;
-            const startingY = window.pageYOffset;
-            const duration = 1500; 
-            let startTime = null;
+            const alvoId = this.getAttribute('href');
+            const sectionAlvo = document.querySelector(alvoId);
+            const distanciaDoAlvo = sectionAlvo.getBoundingClientRect().top;
+            const InicioY = window.pageYOffset;
+            const duracao = 1500; 
+            let tempoInicio = null;
 
-            function scrollAnimation(currentTime) {
-                if (startTime === null) startTime = currentTime;
-                const timeElapsed = currentTime - startTime;
-                const progress = Math.min(timeElapsed / duration, 1);
-                window.scrollTo(0, startingY + distanceToTarget * progress);
-                if (timeElapsed < duration) {
-                    requestAnimationFrame(scrollAnimation);
+            function animacaoScroll(tempoAtual) {
+                if (tempoInicio === null) tempoInicio = tempoAtual;
+                const tempoUtilizado = tempoAtual - tempoInicio;
+                const progresso = Math.min(tempoUtilizado / duracao, 1);
+                window.scrollTo(0, InicioY + distanciaDoAlvo * progresso);
+                if (tempoUtilizado < duracao) {
+                    requestAnimationFrame(animacaoScroll);
                 }
             }
 
-            requestAnimationFrame(scrollAnimation);
+            requestAnimationFrame(animacaoScroll);
         });
     });
 });
+
+window.addEventListener('scroll', ()=>{
+    if(window.scrollY > 100){
+        buttonVoltaHome.style.display = 'block';
+        buttonVoltaHome.style.opacity = '1';
+    }else{
+        buttonVoltaHome.style.opacity = '0';
+        setTimeout(() => {
+            buttonVoltaHome.style.display = 'none';
+        }, 300);
+    }
+});
+
+buttonVoltaHome.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
 
 ulNavHeader.forEach(li => {
     li.addEventListener('click', ()=>{
@@ -74,9 +104,13 @@ const etapaEldorado = {
     imagemEtapa: "/HTML/assets/imagem-eldorado.jpg"
 }
 
-etapasCadastradas.push(etapaTacuru);
-etapasCadastradas.push(etapaEldorado);
+cadastraEtatas();
 atualizaListaEtapas();
+
+function cadastraEtatas(){
+    etapasCadastradas.push(etapaTacuru);
+    etapasCadastradas.push(etapaEldorado);
+}
 
 
 function atualizaListaEtapas(){
@@ -195,7 +229,8 @@ document.addEventListener('DOMContentLoaded', () => {
     sectionHome.style.backgroundImage = 'url("/HTML/assets/imagem-background-site.png")';
     const imagens = [
         '/HTML/assets/background-ciclismo.jpeg',
-        '/HTML/assets/backgournf-image-home-2.jpeg'
+        '/HTML/assets/backgournf-image-home-2.jpeg',
+        '/HTML/assets/imagem-background-site.png'
     ];
 
     let imageIndex = 0;
@@ -219,38 +254,45 @@ iconeUser.addEventListener('click', ()=>{
     menuUser.classList.toggle('active');
 });
 
+document.getElementById('item-sair').addEventListener('click', ()=>{
+    localStorage.setItem('logado', 'false');
+    buttonLogin.classList.remove('hidden');
+    iconeUser.classList.add('hidden');
+    menuUser.classList.toggle('active');
+    resetaCamposPerfil();
+});
+
+function resetaCamposPerfil(){
+    inputEmailInfo.value = '';
+    inputNomeInfor.value = '';
+    inputNumeroInfo.value = '';
+}
+
+document.querySelector('.btn-perfil').addEventListener('click', ()=>{
+    perfilUser.classList.toggle('hidden');
+});
+
 document.getElementById('minha-conta').addEventListener('click', ()=>{
+    perfilUser.classList.toggle('hidden');
     const usuarioLogaooJSON = localStorage.getItem('usuarioLogado');
+    
 
     if(usuarioLogaooJSON){
         const usuarioLogado = JSON.parse(usuarioLogaooJSON);
-        const emailUsuario = usuarioLogado.email;
-        const nomeUsuario = usuarioLogado.nome;
-
-        const htmlContent = `<form style="display: flex; flex-direction: column; gap: 15px;">
-            <p id="email-usuario-logado">${emailUsuario}</p>
-            <p id="nome-usuario-logado">${nomeUsuario}</p>             
-        </form>
-        `
-        Swal.fire({
-            title: "<strong>Minha Conta</strong>",
-            icon: "info",
-            html: htmlContent,
-            showCloseButton: true,
-            showCancelButton: true,
-            focusConfirm: false,
-            confirmButtonText: `
-              Ok
-            `,
-            confirmButtonAriaLabel: "Thumbs up, great!",
-            cancelButtonText: `
-              Sair
-            `,
-            cancelButtonAriaLabel: "Thumbs down",
-          })
+        inputEmailInfo.value = usuarioLogado.nome;
+        inputNomeInfor.value = usuarioLogado.email;
+        inputNumeroInfo.value = '67998375906';
     }else{
         console.log('Nenhum usuário encontrado');
+        inputNumeroInfo.value = 'Nao Possui numero no cadastro';
     }
+});
+
+fotosEtapas.forEach((fotos) =>{
+    fotos.addEventListener('click', ()=>{
+
+       fotos.classList.toggle('active');
+    });
 });
 
 
@@ -259,4 +301,13 @@ document.getElementById('sair').addEventListener('click', ()=>{
     buttonLogin.classList.remove('hidden');
     iconeUser.classList.add('hidden');
     menuUser.classList.toggle('active');
+});
+
+suporte.addEventListener('click',function(){
+    Swal.fire({
+        icon: "success",
+        title: "Entre em contato via email. Obrigado!",
+        text: "consesulMs@gmail.com",
+        footer: '<a href="#app__section-patrocinadores">Porque virar um patrocinador?</a>'
+    });
 });

@@ -47,6 +47,31 @@
             <div class="divider"></div>
         </div>
 
+        <div class="perfil hidden">
+            <div class="options">
+                <img id="icon__perfil" src="/HTML/assets/icon-pessoa.jpg" alt="imagem padrao perfil">
+                <div class="divider"></div>
+                <ul class="list-perfil">
+                    <li class="list-perfil-itens">Perfil</li>
+                    <li class="list-perfil-itens">Minhas informações</li>
+                    <li class="list-perfil-itens" id="item-sair">Sair</li>
+                </ul>
+                <img id="icon__bike" src="/HTML/assets/icon-bike.png" alt="">
+            </div>
+            <div class="info-user">
+                <h3>Informações</h3>
+                <form id="form-info-user">
+                    <label  for="nome">Nome</label>
+                    <input id="input-nome-info" type="text" name="nome">
+                    <label for="email">Email</label>
+                    <input id="input-email-info" type="email" name="email">
+                    <label for="telefone">Telefone</label>
+                    <input id="input-numero-info" type="number" name="telefone">
+                </form>
+                <button class="btn-perfil">Fechar</button>
+            </div>
+        </div>
+
         <section id="app__section-home">
             <div class="home">
                 <h1>Conesul de Cicilsmo</h1>
@@ -55,6 +80,7 @@
             </div>
         </section>
 
+        <button  id="voltarAoTopo" class="volta-pro-topo">↑</button>
 
         <section id="app__section-etapas" >
             <h2 class="paragrafo-section-home">Conferir Etapas</h2>
@@ -78,6 +104,22 @@
                     </div>
                 </div>
                 <img id="seta-move" class="muda-etapa" src="/HTML/assets/seta-direita.png" alt="seta-esquerda">
+            </div>
+        </section>
+
+        <section id="app__section-fotos">
+            <h2 class="paragrafo-section-home">Recordações</h2>
+            <div class="info-fotos">
+                <img class="foto-etapa" src="/HTML/assets/foto-etapa-1.jpg" alt="foto campeonato">
+                <img class="foto-etapa" src="/HTML/assets/foto-etapa-2.jpg" alt="foto campeonato">
+                <img class="foto-etapa" src="/HTML/assets/foto-etapa-3.jpg" alt="foto campeonato">
+                <img class="foto-etapa" src="/HTML/assets/foto-etapa-4.jpg" alt="foto campeonato">
+                <img class="foto-etapa" src="/HTML/assets/foto-etapa-5.jpg" alt="foto campeonato">
+                <img class="foto-etapa" src="/HTML/assets/foto-etapa-6.jpg" alt="foto campeonato">
+                <img class="foto-etapa" src="/HTML/assets/foto-etapa-7.jpg" alt="foto campeonato">
+                <img class="foto-etapa" src="/HTML/assets/foto-etapa-8.jpg" alt="foto campeonato">
+                <img class="foto-etapa" src="/HTML/assets/foto-etapa-9.jpg" alt="foto campeonato">
+                <img class="foto-etapa" src="/HTML/assets/foto-etapa-10.jpg" alt="foto campeonato">
             </div>
         </section>
 
@@ -112,16 +154,16 @@
                 <ul class="app__header-nav-list-footer">
                     <label class="label-info">Ajuda</label>
                     <li class="li-fotter">
-                        <a class="link-footer" href="">Suporte</a>
+                        <a class="link-footer" id="suporte" href="#">Suporte</a>
                     </li>
                 </ul>
                 <ul class="app__header-nav-list-footer">
                     <label class="label-info">Termos de Uso</label>
                     <li class="li-fotter">
-                        <a class="link-footer" href="">Política de Cookies</a>
+                        <a class="link-footer" href="#">Política de Cookies</a>
                     </li>
                     <li class="li-fotter">
-                        <a class="link-footer" href="">Política de Privacidade</a>
+                        <a class="link-footer" href="#">Política de Privacidade</a>
                     </li>
                 </ul>
                 <ul class="app__header-nav-list-footer">
